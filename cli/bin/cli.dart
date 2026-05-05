@@ -12,7 +12,7 @@ Outras informacoes importantes sobre o cli; nosso aplicativo.
 
 site		:
 
-Autor		: Brayan  <brayan@gmail.com>
+Autor		: Brayan Viado  <brayan@gmail.com>
 
 Manutencao	: Marcelo, Julia e Miguel 
 
