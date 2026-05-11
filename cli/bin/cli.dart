@@ -326,7 +326,7 @@ import 'package:http/http.dart' as http;
 const version = '0.0.10';
 
 // =========================
-// FUNÇÃO PRINCIPAL
+// FUNÇÃO PRINCIPAL -- Marcelo
 // =========================
 void main(List<String> arguments) {
   if (arguments.isEmpty || arguments.first == 'help') {
@@ -342,7 +342,7 @@ void main(List<String> arguments) {
 }
 
 // =========================
-// BUSCA NA WIKIPEDIA
+// BUSCA NA WIKIPEDIA -- Marcelo
 // =========================
 void searchWikipedia(List<String>? arguments) async {
   final String articleTitle;
