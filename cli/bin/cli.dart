@@ -96,11 +96,11 @@ Historico do Versionamento:
 
 
 
-0.0.2 - Miguel - 06/04/2026
+0.0.2 - Miguel Camisa - 06/04/2026
 
 
 
-0.0.3 - Julia -06/04/2026
+0.0.3 - Julia Caetano   -06/04/2026
 
 
 
