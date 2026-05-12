@@ -96,7 +96,7 @@ Historico do Versionamento:
 
 
 
-0.0.2 - Miguel Camisa - 06/04/2026
+0.0.2 - Miguel Camisa de Paula  - 06/04/2026
 
 
 
