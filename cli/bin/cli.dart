@@ -745,7 +745,7 @@ void searchWikipedia(List<String>? arguments) async {
 
 // =========================
 
-// CHAMADA DA API (COM JSON BONITO)
+// CHAMADA DA API 
 
 // =========================
 
