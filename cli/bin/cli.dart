@@ -24,11 +24,11 @@ site :
 
 
 
-Autor : Brayan Albuquerque Biazini <brayan@gmail.com>
+Autor : Marcelo Barbosa Wenceslau Filho (marcelo.b.filho11@aluno.senai.br
 
 
 
-Manutencao : Marcelo, Julia e Miguel 
+Manutencao : Marcelo, Brayan, Julia e Miguel 
 
 
 
