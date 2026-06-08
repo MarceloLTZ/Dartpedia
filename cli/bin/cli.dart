@@ -826,7 +826,7 @@ manutenção: brayan
 
 
 codigo:
-*/
+
 
 import 'dart:io';
 import 'package:http/http.dart' as http;
@@ -840,3 +840,22 @@ void main(List<String> arguments) async {
   // Isso resolve o problema do programa fechar antes da hora
   await runner.run(arguments); 
 }
+*/
+
+
+//ATIVIDADE 5 - ATUALIZACAO 
+
+
+import 'package:command_runner/command_runner.dart';
+
+const version = '0.0.1';
+
+void main(List<String> arguments) {
+  var commandRunner =
+      CommandRunner()
+        ..addCommand(HelpCommand());
+
+  commandRunner.run(arguments);
+}
+
+
