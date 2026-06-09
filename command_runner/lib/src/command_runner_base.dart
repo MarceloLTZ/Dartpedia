@@ -5,16 +5,24 @@
   }
 }*/
 
-
 //ATUALIZACAO COMMAND_RUNNER_BASE.DART
 
+
+import 'dart:async'; // Add this line
 import 'dart:collection';
 import 'dart:io';
 
 import 'arguments.dart';
+import 'exceptions.dart'; // Add this line
+
+
 
 class CommandRunner {
+  CommandRunner({this.onError});
+
   final Map<String, Command> _commands = <String, Command>{};
+
+  FutureOr<void> Function(Object)? onError;
 
   UnmodifiableSetView<Command> get commands =>
       UnmodifiableSetView<Command>(
@@ -22,15 +30,21 @@ class CommandRunner {
       );
 
   Future<void> run(List<String> input) async {
+  try {
     final ArgResults results = parse(input);
 
     if (results.command != null) {
-      Object? output =
-          await results.command!.run(results);
-
+      Object? output = await results.command!.run(results);
       print(output.toString());
     }
+  } on Exception catch (exception) {
+    if (onError != null) {
+      onError!(exception);
+    } else {
+      rethrow;
+    }
   }
+}
 
   void addCommand(Command command) {
     _commands[command.name] = command;
@@ -38,17 +52,13 @@ class CommandRunner {
   }
 
   ArgResults parse(List<String> input) {
-    var results = ArgResults();
-
-    results.command = _commands[input.first];
-
-    return results;
+    String _removeDash(String input) {
+  if (input.startsWith('--')) {
+    return input.substring(2);
   }
-
-  String get usage {
-    final exeFile =
-        Platform.script.path.split('/').last;
-
-    return 'Usage: dart bin/$exeFile <command> [commandArg?] [...options?]';
+  if (input.startsWith('-')) {
+    return input.substring(1);
   }
+  return input;
+}
 }
